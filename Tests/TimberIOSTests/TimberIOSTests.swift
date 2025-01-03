@@ -1,6 +1,13 @@
 import Testing
 @testable import TimberIOS
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+
+@Test func testDebugLogexEcutes() async throws {
+    Timber.d("Debug Log")
+    #expect(true)
+}
+
+@Test func testInfoLogExecutes() async throws {
+    Timber.d("Debug Log")
+    #expect(true)
 }
