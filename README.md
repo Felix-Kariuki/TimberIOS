@@ -4,7 +4,7 @@ Built on top of the Apple's Unified Logging system, TimberIOS makes it easier to
 with an easy and unified approach. 
 
 Instead of having to do the setup for Logging in each of your projects, why not just have this package
-and save the time.
+and save the time while maintaining logging consistency across the project.
 
 ## Installation
 Two simple steps
