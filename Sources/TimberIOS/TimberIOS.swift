@@ -5,10 +5,12 @@ import os
 import Foundation
 
 
+/// A logging utility to standardize debug, info, error, and warning logs.
+///
+/// The `Timber` struct is a wrapper around Apple's `Logger` API, designed to make
+/// logging consistent and easy to use throughout the application. It utilizes
+/// conditional compilation to ensure logs are only produced in debug builds.
 /**
- *Timber logger for IOS inspired by android's Timber Logging Library *
- *
- *
  *Usage
  *Timber.i("Log message here") - For Logging Info Logs
  *Timber.d("Log message here") - For Logging Debug Logs
@@ -46,7 +48,7 @@ struct Timber {
 }
 
 /**
- *The various ;levels of logging available
+ *The various levels of logging available
  *debug
  *info
  *error
