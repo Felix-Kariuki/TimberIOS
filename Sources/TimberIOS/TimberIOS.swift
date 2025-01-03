@@ -18,7 +18,7 @@ import Foundation
  *Timber.e("Log message here") - For Logging Error Logs
  */
 
-struct Timber {
+public struct Timber {
     private static let subsystem = Bundle.main.bundleIdentifier ?? "com.logger.timber"
     private static let logger = Logger(subsystem: subsystem, category: "logging")
     
@@ -61,7 +61,7 @@ enum LoggingLevel: String {
     case warning
 }
 
-func networkLogger(_ request: URLRequest, response: HTTPURLResponse?, data: Data?) {
+public func networkLogger(_ request: URLRequest, response: HTTPURLResponse?, data: Data?) {
     let networkLogger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "com.logger.timber.network", category: "network")
 #if DEBUG
     networkLogger.info("Request: \(request.url?.absoluteString ?? "Unknown URL", privacy: .public)")
