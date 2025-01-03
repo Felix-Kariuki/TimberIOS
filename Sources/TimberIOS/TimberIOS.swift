@@ -22,25 +22,25 @@ public struct Timber {
     private static let subsystem = Bundle.main.bundleIdentifier ?? "com.logger.timber"
     private static let logger = Logger(subsystem: subsystem, category: "logging")
     
-    static func d(_ message: String) {
+    public static func d(_ message: String) {
         #if DEBUG
         logger.debug("Debug: \(message, privacy: .private)")
         #endif
     }
     
-    static func i(_ message: String) {
+    public static func i(_ message: String) {
         #if DEBUG
         logger.info("Info: \(message, privacy: .private)")
         #endif
     }
     
-    static func e(_ message: String) {
+    public static func e(_ message: String) {
         #if DEBUG
         logger.error("Error: \(message, privacy: .private)")
         #endif
     }
     
-    static func w(_ message: String) {
+    public static func w(_ message: String) {
         #if DEBUG
         logger.info("Warning: \(message, privacy: .private)")
         #endif
