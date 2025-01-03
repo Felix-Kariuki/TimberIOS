@@ -42,7 +42,7 @@ public struct Timber {
     
     public static func w(_ message: String) {
         #if DEBUG
-        logger.info("Warning: \(message, privacy: .private)")
+        logger.warning("Warning: \(message, privacy: .private)")
         #endif
     }
 }
