@@ -99,10 +99,7 @@ public func networkLogger(_ request: URLRequest, response: HTTPURLResponse?, dat
         networkLogger.info("Response Size: \(responseSize, privacy: .public)")
         
         if let responseString = String(data: data, encoding: .utf8) {
-            networkLogger.debug("""
-                                Response Body: \(responseString, privacy: .private) 
-                                
-                                """)
+            networkLogger.debug("Response Body: \(responseString, privacy: .private)")
         }
     }
 #endif
