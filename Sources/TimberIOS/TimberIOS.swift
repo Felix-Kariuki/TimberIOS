@@ -100,8 +100,7 @@ public func networkLogger(_ request: URLRequest, response: HTTPURLResponse?, dat
         
         if let responseString = String(data: data, encoding: .utf8) {
             networkLogger.debug("""
-                                
-                                Response Body: \(responseString, privacy: .private) \n
+                                Response Body: \(responseString, privacy: .private) 
                                 
                                 """)
         }
