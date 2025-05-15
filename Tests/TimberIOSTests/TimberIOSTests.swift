@@ -8,6 +8,6 @@ import Testing
 }
 
 @Test func testInfoLogExecutes() async throws {
-    Timber.d("Debug Log")
+    Timber.i("Debug Log")
     #expect(true)
 }
