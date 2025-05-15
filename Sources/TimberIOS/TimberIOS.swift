@@ -24,25 +24,25 @@ public struct Timber {
     
     public static func d(_ message: String) {
         #if DEBUG
-        logger.debug("Debug: \(message, privacy: .private)")
+        logger.debug("\n Debug: \(message, privacy: .private) \n")
         #endif
     }
     
     public static func i(_ message: String) {
         #if DEBUG
-        logger.info("Info: \(message, privacy: .private)")
+        logger.info("\n Info: \(message, privacy: .private) \n")
         #endif
     }
     
     public static func e(_ message: String) {
         #if DEBUG
-        logger.error("Error: \(message, privacy: .private)")
+        logger.error("\n Error: \(message, privacy: .private) \n")
         #endif
     }
     
     public static func w(_ message: String) {
         #if DEBUG
-        logger.warning("Warning: \(message, privacy: .private)")
+        logger.warning("\n Warning: \(message, privacy: .private) \n")
         #endif
     }
 }
@@ -64,7 +64,7 @@ enum LoggingLevel: String {
 public func networkLogger(_ request: URLRequest, response: HTTPURLResponse?, data: Data?) {
     let networkLogger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "com.logger.timber.network", category: "network")
 #if DEBUG
-    networkLogger.info("Request: \(request.url?.absoluteString ?? "Unknown URL", privacy: .public)")
+    networkLogger.info("\n Request: \(request.url?.absoluteString ?? "Unknown URL", privacy: .public)")
     networkLogger.info("Method: \(request.httpMethod ?? "Unknown method", privacy: .public)")
     networkLogger.info("Headers: \(request.allHTTPHeaderFields?.description ?? "No headers", privacy: .private)")
     
@@ -79,7 +79,7 @@ public func networkLogger(_ request: URLRequest, response: HTTPURLResponse?, dat
         networkLogger.info("Response Size: \(responseSize, privacy: .public)")
         
         if let responseString = String(data: data, encoding: .utf8) {
-            networkLogger.debug("Response Body: \(responseString, privacy: .private)")
+            networkLogger.debug("Response Body: \(responseString, privacy: .private) \n")
         }
     }
 #endif
